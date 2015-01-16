@@ -3,6 +3,9 @@
 
     <string name="app_name">Taschenrechner</string>
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_help">Hilfe</string>
+    <string name="action_end">beenden</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
 
 </resources>

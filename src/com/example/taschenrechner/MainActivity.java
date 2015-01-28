@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
 			loadWebViewActivity();
 			return true;
 		case R.id.action_settings:
-			setActivityBackgroundColor(0xfff00000);;
+			setActivityBackgroundColor(0xfff00000);
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);

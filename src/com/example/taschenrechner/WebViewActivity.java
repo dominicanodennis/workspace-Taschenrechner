@@ -1,14 +1,17 @@
 package com.example.taschenrechner;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.WebView;
 
 public class WebViewActivity extends ActionBarActivity {
 
 	private WebView webview;
+	private final Context context = this;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,16 @@ public class WebViewActivity extends ActionBarActivity {
 		// webview.loadData(customHtml, "text/html", "UTF-8");
 
 	}
+	
+	public void beende(View view) {
+
+		finish();
+
+	}
+	public void setActivityBackgroundColor(int color) {
+		 View view = this.getWindow().getDecorView();
+		 view.setBackgroundColor(color);
+		 }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,6 +52,8 @@ public class WebViewActivity extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			//setActivityBackgroundColor(0xfff00000);
+			beende(webview);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
